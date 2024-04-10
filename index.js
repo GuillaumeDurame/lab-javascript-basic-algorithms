@@ -1,6 +1,6 @@
 // Iteration 1: Names and Input
-const hacker1 = "Guillaume";
-const hacker2 = "Claire";
+const hacker1 = "Claire";
+const hacker2 = "Clair";
 
 console.log(`The driver's name is ${hacker1}`);
 console.log(`The navigator's name is ${hacker2}`);
@@ -20,18 +20,11 @@ const navhacker1 = hacker1.split("").join(" ").toUpperCase();
 const navhacker2 = hacker2.split("").reverse(" ").join("");
 console.log(navhacker1)
 console.log(navhacker2)
-const hacker = [hacker2 , hacker1];
-hacker.sort();
 
-hacker.sort(function(hacker1, hacker2){
-    if (hacker1 > hacker2){
-        console.log(`The driver's name goes first.`)
-    }
-    else if (hacker1 < hacker2){
-        console.log(`Yo, the navigator goes first, definitely.`)
-    }
-    else{
-        console.log(`What?! You both have the same name?`)
-    }
-})
-
+if(hacker1.localeCompare(hacker2) < 0) {
+    console.log(`The driver's name goes first.`);
+}else if(hacker1.localeCompare(hacker2) > 0) {
+    console.log(`Yo, the navigator goes first, definitely.`);
+}else{
+    console.log(`What?! You both have the same name?`);
+}
